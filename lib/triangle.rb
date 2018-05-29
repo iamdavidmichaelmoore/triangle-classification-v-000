@@ -16,10 +16,10 @@ class Triangle
     if lengths.include?("/0|-\d+/") || !triangle_inequality_test
         raise TriangleError
     else
-      type = triangles.detect do |triangle, sides|
+      triangles.detect do |triangle, sides|
         lengths.uniq.size == sides
       end
-      type[0]
+      # type[0]
     end
   end
 
