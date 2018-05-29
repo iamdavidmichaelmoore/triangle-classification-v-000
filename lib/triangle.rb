@@ -11,7 +11,8 @@ class Triangle
 
   def kind
     triangles = {:equilateral => 1, :isosceles => 2, :scalene => 3}
-    lengths = [length1, length2, length3].sort
+    lengths = [length1, length2, length3]
+    lengths.sort
     triangle_inequality_test = lengths[0] + lengths[1] > lengths[2]
     if @lengths.include?("/0|-\d+/") || !triangle_inequality_test
         raise TriangleError
